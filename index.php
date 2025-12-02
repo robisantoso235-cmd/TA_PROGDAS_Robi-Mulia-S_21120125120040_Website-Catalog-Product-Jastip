@@ -35,9 +35,8 @@ if (empty($products) && $categoryId) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS & JS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css?v=2.0">
-    <script src="./js/script.js?v=2.0"></script>
 
     <!-- Remix Icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
@@ -76,7 +75,7 @@ if (empty($products) && $categoryId) {
             </div>
         </div>
     </div>
-</div>
+</div> 
 
 <!-- LAYANAN -->
 <div class="layanan" id="layanan-section">
