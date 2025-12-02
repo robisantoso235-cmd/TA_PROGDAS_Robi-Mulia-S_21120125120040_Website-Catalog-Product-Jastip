@@ -1,0 +1,90 @@
+{
+  "categories": [
+    {"id": 1, "name": "Bags"},
+    {"id": 2, "name": "Wallets"},
+    {"id": 3, "name": "Shoes"},
+    {"id": 4, "name": "Accessories"}
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Large Corner Zip Wristlet",
+      "description": "Style Number: CZ277\n\nMeasurements:\n- Length: 7.75\"\n- Height: 4.75\"\n- Width: 0.5\"\n\nMaterials:\n- Signature coated canvas\n- Fabric lining\n\nFeatures:\n- Two credit card slots\n- Zip closure\n- Wrist strap attached\n\nEditor's Notes:\nOur Large Corner Zip Wristlet in Signature canvas is an everyday essential that won't weigh you down. Crafted of durable canvas with our iconic print, this large wristlet has space for your keys, cards and even your iPhone (up to 16 Pro Max). This canvas wristlet features a wrist strap for ease and a zip-top closure to secure your items. To keep your cards handy on the go, organize them in the convenient built-in slots.",
+      "price": 1830000,
+      "image": "https://coach.scene7.com/is/image/Coach/cz277_imxhe_a0",
+      "category_id": 2
+    },
+    {
+      "id": 2,
+      "name": "3-In-1 Wallet In Signature Canvas With Patches",
+      "description": "Style Number: CCG27\n\nMeasurements:\n- Length: 4.5\"\n- Height: 3.75\"\n- Width: 1.0\"\n\nMaterials:\n- Signature coated canvas\n\nFeatures:\n- Eight credit card slots\n- Full-length bill compartments\n- Removable insert with ID window and two credit card slots",
+      "price": 1400000,
+      "image": "https://coach.scene7.com/is/image/Coach/ccg27_grm_a0",
+      "category_id": 2
+    },
+    {
+      "id": 3,
+      "name": "Teri Shoulder Bag Coach",
+      "description": "Style Number: CV933\n\nMeasurements:\n- Length: 9.5\"\n- Height: 6.0\"\n- Width: 3.0\"\n\nMaterials:\n- Signature coated canvas\n- Fabric lining\n\nHandle:\n- Detachable handle with 8.5\" drop\n\nStrap:\n- Detachable strap with 22.75\" drop for shoulder or crossbody wear\n\nFeatures:\n- Inside multifunction pocket\n- Zip-top closure\n\nEditor's Notes:\nOur Teri Shoulder Bag has a '90s-inspired silhouette and comes in many shades to match your personal style. Crafted of Signature coated canvas, this designer shoulder bag for women can be worn two ways thanks to its detachable straps. This shoulder bag with chain strap features an interior multifunction pocket and two credit card slots for added organization. It comfortably fits your keys, wallet and phone without feeling weighed down. Finished with a zip-top closure, this bag keeps your essentials secure on the go. Wear it anywhere (and everywhere)—the Teri can be easily dressed up or down.",
+      "price": 2530000,
+      "image": "https://coach.scene7.com/is/image/Coach/cv933_imxaq_a0",
+      "category_id": 1
+    },
+    {
+      "id": 4,
+      "name": "New Balance 530 White Silver Navy",
+      "description": "The New Balance 530 White Silver Navy features a white mesh upper with metallic silver and white leather overlays. On the quarter panel, a grey New Balance logo outlined in navy adds contrast. From there, a white and grey ABZORB sole adds the finishing touch.",
+      "price": 1750000,
+      "image": "https://cdn-old.kickavenue.com/eyJidWNrZXQiOiJraWNrYXZlbnVlLWFzc2V0cyIsImtleSI6InByb2R1Y3RzLzMxNjQ3L2UxMTk3ZGE4YTlkODQ2ZmVmOWEwNjYzMGIzMTBkZTc2LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTQwMH19fQ==",
+      "category_id": 3
+    },
+    {
+      "id": 5,
+      "name": "Klare Crossbody Bag",
+      "description": "Style Number: CCC70\n\nMeasurements:\n- Length: 8.5\"\n- Height: 6.25\"\n- Width: 2.75\"\n\nMaterials:\n- Suede\n- Signature coated canvas\n- Smooth leather\n- Fabric lining\n\nStrap:\n- 22\" drop for three ways to wear\n  - Short on shoulder\n  - Long on shoulder\n  - Crossbody style\n\nFeatures:\n- Outside slip pocket\n- Inside zip pocket\n- Multifunction pockets\n- Snap closure",
+      "price": 1300000,
+      "image": "https://coach.scene7.com/is/image/Coach/ccc70_imyee_a0",
+      "category_id": 1
+    },
+    {
+      "id": 6,
+      "name": "West Backpack",
+      "description": "Style Number: CV925\n\nMeasurements:\n- Length: 12.5\"\n- Height: 16.75\"\n- Width: 6.0\"\n\nMaterials:\n- Signature coated canvas\n- Smooth calf leather\n- Fabric lining\n\nHandle:\n- Top handle with 3.25\" drop\n\nStrap:\n- Adjustable shoulder straps\n\nFeatures:\n- Outside zip pocket\n- Inside zip pocket\n- Cell phone pocket\n- Multifunction pockets\n- Two separate main compartments with zip closures\n\nEditor's Notes:\nThe West Backpack is perfect for commuting to work or exploring the city. Crafted of Signature coated canvas and smooth calf leather, this men's designer backpack carries all your essentials, including up to a 15\" laptop. It features a spacious main compartment with a zip closure, plus an outside front pocket to keep your top items handy. A classic silhouette, this everyday backpack for men will never go out of style.",
+      "price": 2750000,
+      "image": "https://coach.scene7.com/is/image/Coach/cv925_qbmi5_a0",
+      "category_id": 1
+    },
+    {
+      "id": 7,
+      "name": "Zip Card Case",
+      "description": "Style Number: CBK17\n\nMeasurements:\n- Length: 5.0\"\n- Height: 3.25\"\n\nMaterials:\n- Smooth grain leather\n\nFeatures:\n- Zip pocket\n- Five credit card slots",
+      "price": 1250000,
+      "image": "https://coach.scene7.com/is/image/Coach/cbk17_qbtn2_a0",
+      "category_id": 2
+    },
+    {
+      "id": 8,
+      "name": "Leather Tech Gloves",
+      "description": "Style Number: CV863\n\nMaterials:\n- 100% leather\n- Lining: 100% merino wool\n\nFeatures:\n- Touch sensitive technology\n\nEditor's Notes:\nThe Leather Tech Gloves are crafted of leather with a cozy merino wool lining. These men's leather tech gloves are perfect for staying connected while on the go, thanks to the touch-sensitive technology that allows you to use your smartphone without taking them off.",
+      "price": 1450000,
+      "image": "https://coach.scene7.com/is/image/Coach/cv863_cwh_a0",
+      "category_id": 4
+    },
+    {
+      "id": 9,
+      "name": "Trigger Snap Bag Charm",
+      "description": "Style Number: CCF03\n\nMeasurements:\n- Length: 0.75\"\n- Height: 2.5\"\n\nMaterials:\n- Smooth leather\n\nFeatures:\n- Snap closure\n- Attached split key rings\n- Dogleash clip",
+      "price": 855000,
+      "image": "https://coach.scene7.com/is/image/Coach/ccf03_svpf6_a0",
+      "category_id": 4
+    },
+    {
+      "id": 10,
+      "name": "Puma Speedcat OG Red White",
+      "description": "Sebuah PUMA klasik yang terinspirasi oleh kecepatan arena balap: Speedcat OG. Lebih menonjol dari gaya yang lain dengan bentuknya yang terinspirasi dari sepatu balap dan gaya keren yang terlihat cepat dan berani. Hadirkan motorsport ke streetstyle dan miliki tren low profile dengan versi baru dari siluet ikonik ini.",
+      "price": 1990000,
+      "image": "https://cdn-old.kickavenue.com/eyJidWNrZXQiOiJraWNrYXZlbnVlLWFzc2V0cyIsImtleSI6InByb2R1Y3RzLzEwNjk4OC9mYzE1ODdjNzNkN2RmZGM1OTllNTIxYjc2OTMwOWM4My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE0MDB9fX0=",
+      "category_id": 3
+    }
+  ]
+}

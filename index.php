@@ -1,8 +1,31 @@
+<?php
+require_once 'classes/Product.php';
+require_once 'classes/ProductRepository.php';
+require_once 'includes/helpers.php';
+
+// Initialize repository
+$productRepo = new ProductRepository(__DIR__ . '/data/products.json');
+
+// Get category from URL if exists
+$categoryId = isset($_GET['category']) ? (int)$_GET['category'] : null;
+
+// Get products based on category filter
+$products = $productRepo->getProductsByCategory($categoryId);
+$categories = $productRepo->getAllCategories();
+
+// Error handling
+$error = '';
+if (empty($products) && $categoryId) {
+    $error = 'Tidak ada produk dalam kategori yang dipilih.';
+} elseif (empty($products)) {
+    $error = 'Tidak ada produk yang tersedia.';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1200">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -34,7 +57,6 @@
                     <li><a href="#layanan-section">Layanan</a></li>
                     <li><a href="#produk-section">Produk Kami</a></li>
                     <li><a href="https://www.instagram.com/jastipdies/" target="_blank">Social media</a></li>                  </ul>
-                <i class="ri-menu-3-line ri-2x hamburger"></i>
             </div>
         </div>
     </div>
@@ -85,48 +107,45 @@
         <div class="foto_box">
             <h2>Produk Kami</h2>
             
-            <!-- Search Box -->
-            <div class="search-container">
-                <div class="search-box">
-                    <i class="ri-search-line"></i>
-                    <input type="text" id="search-input" placeholder="Cari produk..." aria-label="Cari produk">
-                    <button id="clear-search" class="clear-btn" style="display: none;" aria-label="Hapus pencarian">
-                        <i class="ri-close-line"></i>
-                    </button>
+            <!-- Category Filter -->
+            <div class="category-section">
+                <div class="category-container">
+                    <h3 class="category-title">Kategori Produk</h3>
+                    <div class="category-filter">
+                        <a href="?" class="category-btn <?= !isset($_GET['category']) ? 'active' : '' ?>">
+                            <span>Semua</span>
+                        </a>
+                        <?php foreach ($categories as $category): 
+                            $productCount = count($productRepo->getProductsByCategory($category['id']));
+                        ?>
+                            <a href="?category=<?= $category['id'] ?>" 
+                               class="category-btn <?= (isset($_GET['category']) && $_GET['category'] == $category['id']) ? 'active' : '' ?>">
+                                <span><?= htmlspecialchars($category['name']) ?></span>
+                                <?php if ($productCount > 0): ?>
+                                    <span class="category-count"><?= $productCount ?></span>
+                                <?php endif; ?>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
             
-            <!-- Filter Genre -->
-            <!-- Replace your current genre-filter div with this one -->
-            <div class="genre-filter">
-            <button class="filter-btn active" data-genre="all">
-                <i class="ri-grid-line"></i>
-                <span>Semua</span>
-            </button>
-            <button class="filter-btn" data-genre="Bags">
-                <i class="ri-shopping-bag-line"></i>
-                <span>Tas</span>
-            </button>
-            <button class="filter-btn" data-genre="Wallet">
-                <i class="ri-wallet-line"></i>
-                <span>Dompet</span>
-            </button>
-            <button class="filter-btn" data-genre="Shoes">
-                <i class="ri-t-shirt-line"></i>
-                <span>Sepatu</span>
-            </button>
-            <button class="filter-btn" data-genre="Accessories">
-                <i class="ri-star-line"></i>
-                <span>Aksesoris</span>
-            </button>
-            <button class="filter-btn" data-genre="Clothing">
-                <i class="ri-t-shirt-line"></i>
-                <span>Pakaian</span>
-            </button>
-        </div>
+            <!-- Add some spacing -->
+            <div style="margin-bottom: 20px;"></div>
             
-            <div id="product-container" class="produk-grid">
-                <!-- Products will be loaded here by JavaScript -->
+            <div class="produk-grid" id="produk-container">
+                <?php if ($error): ?>
+                    <div class="error-message">
+                        <?php echo htmlspecialchars($error); ?>
+                    </div>
+                <?php else: ?>
+                    <?php 
+                        foreach ($products as $product): 
+                            $categoryName = $productRepo->getCategoryName($product->getCategoryId());
+                            echo renderProductCard($product, $categoryName);
+                        endforeach; 
+                    ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -150,9 +169,6 @@
         </div>
     </div>
 </div>
-
-<!-- Load produk dari database -->
-<script src="./js/frontend-produk.js?v=2.1"></script>
 
 </body>
 </html>
