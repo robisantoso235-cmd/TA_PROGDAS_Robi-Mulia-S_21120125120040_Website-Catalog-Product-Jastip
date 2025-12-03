@@ -54,6 +54,6 @@ class ProductRepository {
                 return $category['name'];
             }
         }
-        return 'Uncategorized'
+        return 'Uncategorized';
     }
 }
